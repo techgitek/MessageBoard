@@ -1,0 +1,39 @@
+[1mdiff --git a/app/Providers/AppServiceProvider.php b/app/Providers/AppServiceProvider.php[m
+[1mindex 35471f6..7165095 100644[m
+[1m--- a/app/Providers/AppServiceProvider.php[m
+[1m+++ b/app/Providers/AppServiceProvider.php[m
+[36m@@ -13,7 +13,7 @@[m [mclass AppServiceProvider extends ServiceProvider[m
+      */[m
+     public function boot()[m
+     {[m
+[31m-        //[m
+[32m+[m[32m        \Schema::defaultStringLength(191);[m
+     }[m
+ [m
+     /**[m
+[1mdiff --git a/config/app.php b/config/app.php[m
+[1mindex 0e4ebed..9357542 100644[m
+[1m--- a/config/app.php[m
+[1m+++ b/config/app.php[m
+[36m@@ -65,7 +65,7 @@[m [mreturn [[m
+     |[m
+     */[m
+ [m
+[31m-    'timezone' => 'UTC',[m
+[32m+[m[32m    'timezone' => 'Asia/Tokyo',[m
+ [m
+     /*[m
+     |--------------------------------------------------------------------------[m
+[1mdiff --git a/resources/views/welcome.blade.php b/resources/views/welcome.blade.php[m
+[1mindex a246e10..d3542ee 100644[m
+[1m--- a/resources/views/welcome.blade.php[m
+[1m+++ b/resources/views/welcome.blade.php[m
+[36m@@ -79,7 +79,7 @@[m
+ [m
+             <div class="content">[m
+                 <div class="title m-b-md">[m
+[31m-                    Laravel[m
+[32m+[m[32m                    taro[m
+                 </div>[m
+ [m
+                 <div class="links">[m
